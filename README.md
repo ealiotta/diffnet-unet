@@ -32,8 +32,8 @@ Requirements:	python with the following libraries
 Example image files are provided with 3, 6, and 20 diffusion encoding directions. After successful
 completion, you should see one slice of the reconstructed dFA and dMD maps in a dialog box.
 
-Eric Aliotta, PhD
-University of Virginia, Department of Radiation Oncology
-06.09.2020
+	Eric Aliotta, PhD
+	University of Virginia, Department of Radiation Oncology
+	06.09.2020
 
-eric.aliotta@virginia.edu
+	eric.aliotta@virginia.edu
