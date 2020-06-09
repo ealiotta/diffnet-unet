@@ -23,7 +23,9 @@ Requirements:	python with the following libraries
 	matplotlib
 	keras (https://keras.io/)
 
-  Usage: python <pathToCode>\applyDiffNet_unet.py <NeuralNetLoc> <ImageLoc> <OutLoc>
+  Usage: 
+  
+  	python <pathToCode>\applyDiffNet_unet.py <NeuralNetLoc> <ImageLoc> <OutLoc>
 
 	where: 	NeuralNetLoc: 	path to folder containing .h5 keras neural network files (provided)
 		ImageLoc: 	path to image file (.nii.gz)
