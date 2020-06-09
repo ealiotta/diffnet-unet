@@ -15,12 +15,13 @@ Data should be formatted as: [Nx,Ny,Nslice,Ndir]
 
 Code outputs dFA and dMD maps (i.e. FA and MD estimates) in matlab (.mat) and numpy (.npy) formats.
 
-Requirements:	python with the following libraries
-                numpy
-                scipy
-                nibabel
-                matplotlib
-                keras (https://keras.io/)
+Requirements:	python with the following libraries 
+
+	numpy
+	scipy
+	nibabel
+	matplotlib
+	keras (https://keras.io/)
 
   Usage: python <pathToCode>\applyDiffNet_unet.py <NeuralNetLoc> <ImageLoc> <OutLoc>
 
@@ -28,7 +29,7 @@ Requirements:	python with the following libraries
 		ImageLoc: 	path to image file (.nii.gz)
 		OutLoc:		path for desired output
 
-Example dicom files are provided with 3, 6, and 20 diffusion encoding directions. After successful
+Example image files are provided with 3, 6, and 20 diffusion encoding directions. After successful
 completion, you should see one slice of the reconstructed dFA and dMD maps in a dialog box.
 
 Eric Aliotta, PhD
