@@ -32,7 +32,9 @@ Requirements:	python with the following libraries
 		OutLoc:		path for desired output
 
 Example image files are provided with 3, 6, and 20 diffusion encoding directions. After successful
-completion, you should see one slice of the reconstructed dFA and dMD maps in a dialog box.
+completion, you should see one slice of the reconstructed dFA and dMD maps in a dialog box:
+
+![example_output](https://github.com/ealiotta/diffnet-unet/edit/master/example_output.png)
 
 	Eric Aliotta, PhD
 	University of Virginia, Department of Radiation Oncology
