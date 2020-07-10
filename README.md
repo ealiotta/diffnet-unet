@@ -34,10 +34,17 @@ Requirements:	python with the following libraries
 Example image files are provided with 3, 6, and 20 diffusion encoding directions. After successful
 completion, you should see one slice of the reconstructed dFA and dMD maps in a dialog box:
 
-![example_output](https://github.com/ealiotta/diffnet-unet/edit/master/example_output.png)
+![example_output_3directions](https://github.com/ealiotta/diffnet-unet/blob/master/example.output.png "example_3directions")
+
+**Note**: I recently noticed some weird behavior with older versions of keras/tensorflow in which the models would load and compute predictions, but with highly innacurate FA/MD values. The models appear to be working correctly with the following versions of keras/tensorflow:
+
+	keras 2.4.3
+	tensorflow 2.2.0
+
+Keep this in mind if the resulting maps do not resemble the above images.
 
 	Eric Aliotta, PhD
 	University of Virginia, Department of Radiation Oncology
-	06.09.2020
+	07.10.2020
 
 	eric.aliotta@virginia.edu
