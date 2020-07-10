@@ -19,9 +19,9 @@ Requirements:	python with the following libraries
 
 	numpy
 	scipy
-	nibabel
-	matplotlib
-	keras (https://keras.io/)
+	nibabel      - only needed to load .nii.gz images
+	matplotlib   - only needed to display output
+	keras        - https://keras.io/
 
   Usage: 
   
