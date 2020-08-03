@@ -52,6 +52,7 @@ if signals.shape[1] != 128 or signals.shape[2] != 128:
     print('Resizing to 128x128...')
     signals = resize(signals, [zres, 128, 128, ndir])
 
+# the x and y directions do matter (brain should be oriented in this fashion)
 signals = np.transpose(signals,[0,2,1,3])
 
 # reconstruct with diffNet
