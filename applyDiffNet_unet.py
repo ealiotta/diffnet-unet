@@ -27,8 +27,10 @@ print('Found %d x %d x %d image with %d directions (+b0 image)' % (IM.shape[0], 
 
 # load pretrained neural network
 NeuralNetFile = NeuralNetLoc + '/UNET_FA_' + str(directions) + 'dir.h5'
+print('Running model: %s' % (NeuralNetFile))
 model_fa = load_model(NeuralNetFile)
 NeuralNetFile = NeuralNetLoc + '/UNET_MD_' + str(directions) + 'dir.h5'
+print('Running model: %s' % (NeuralNetFile))
 model_md = load_model(NeuralNetFile)
 
 yres = IM.shape[0]
@@ -50,6 +52,8 @@ if signals.shape[1] != 128 or signals.shape[2] != 128:
     print('Resizing to 128x128...')
     signals = resize(signals, [zres, 128, 128, ndir])
 
+signals = np.transpose(signals,[0,2,1,3])
+
 # reconstruct with diffNet
 FA = model_fa.predict(signals)
 MD = model_md.predict(signals)/1e3
@@ -57,8 +61,8 @@ MD = model_md.predict(signals)/1e3
 if not os.path.exists(OutLoc):
     os.makedirs(OutLoc)
 
-FA = np.transpose(FA,(1, 2, 0, 3))
-MD = np.transpose(MD,(1, 2, 0, 3))
+FA = np.transpose(FA,(2, 1, 0, 3))
+MD = np.transpose(MD,(2, 1, 0, 3))
 
 # save data as .mat
 FILE = OutLoc + '/dFA.mat'
